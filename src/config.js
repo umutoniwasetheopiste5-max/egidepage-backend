@@ -21,6 +21,14 @@ module.exports = {
   // Protection #6
   appSharedSecret: process.env.APP_SHARED_SECRET,
 
+  // Upstream (cricmad) decryption material - found by decompiling
+  // Egidepage_TV_v15.0.01.apk's BuildConfig. Kept out of the public repo on
+  // purpose: set these as real environment variables (e.g. in Render), never
+  // commit them. See cricmadSource.js for how they're used.
+  cricmadKey: process.env.CRICMAD_KEY,
+  cricmadIv: process.env.CRICMAD_IV,
+  cricmadAuthHeaderValue: process.env.CRICMAD_AUTH_VALUE,
+
   // How often the background resolver re-checks each channel's upstream link.
   // Deliberately randomized around this base (see resolver.js) so requests
   // don't look like a metronome to the upstream CDN.
