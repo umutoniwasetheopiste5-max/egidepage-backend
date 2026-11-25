@@ -1,0 +1,18 @@
+{
+  "name": "egidepage-backend",
+  "version": "1.0.0",
+  "description": "Resilient resolver backend for Egidepage TV - automatic link refresh, encrypted API, short-lived signed stream tokens",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0",
+    "dotenv": "^16.4.5",
+    "express-rate-limit": "^7.4.0"
+  }
+}
