@@ -68,7 +68,7 @@ function parseChannelLink(link) {
 
 async function resolveBaseUrl() {
   const res = await fetch(CONFIG_URL, {
-    headers: { 'Cache-Control': 'no-cache', 'User-Agent': USER_AGENT },
+    headers: { headers: { 'Cache-Control': 'no-cache', 'User-Agent': USER_AGENT },, 'User-Agent': USER_AGENT },
     timeout: 10000,
   });
   if (!res.ok) throw new Error(`config fetch failed: HTTP ${res.status}`);
